@@ -22,3 +22,9 @@ Route::get('admin', function () {
 Route::get('finance', function () {
     return view('finance.finance');
 });
+Route::get('login', function () {
+    return view('autorization.autorizationPage');
+});
+Route::post('autorization/submit', function () {
+    return "Hello";
+})->name('autorization-form');

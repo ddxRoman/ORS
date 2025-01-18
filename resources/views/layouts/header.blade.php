@@ -5,11 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ asset('css/button.css') }}" rel="stylesheet">
     <title>ORS</title>
 </head>
 
-<body>
+<body class="all-page">
     <div class="wrapper">
         <header>
             <div class="header">
@@ -48,7 +47,6 @@
                             <div class="center_section_header">
                                 <!--  Просто кнопка на Хелпер -->
                                 @if(Request::is('/'))
-
                                 <a href="admin" target="_self">
                                     <!--  Просто кнопка на Админка -->
                                     <button class="center-section-header_button">Админка</button>
@@ -78,7 +76,6 @@
         </header>
         @yield('header')
         @if(Request::is('/'))
-
         <div class="MisPanel">
             <a href="action/users/settings.php"><button class="mis-panel-button">Настройки</button></a>
             <a href="https://meet.google.com/" target="_blank"><button class="mis-panel-button">Meet</button></a>
@@ -88,14 +85,9 @@
             <!-- <a href="folders/CsdTasks.php" target="_blank"><button>Задачи</button></a> -->
             <a href="folders/countsymbolForm.php" target="1"><button class="mis-panel-button">Подсчёт</button></a>
             <a href="folders/creeds.php" target="1"><button class="mis-panel-button">Доступы</button></a>
-            <a href="treker/treeker.php" target="1"><button class="mis-panel-button">Трекер</button></a>
            </div><!-- Тут заканчивается МИС панель-->
-        <hr class="misPanel-hr" width="85%"><!-- ХРка полоска -->
-
-
+        <hr class="misPanel-hr"><!-- ХРка полоска -->
 @elseif(Request::is('admin'))
-
-
 <div class="MisPanel">
             <!-- Тут начинает МИС панель.-->
             <a href="folders/addcreeds.php" target="1"><button class="mis-panel-button">Доступы</button></a>

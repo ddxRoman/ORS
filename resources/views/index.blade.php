@@ -1,7 +1,12 @@
-
+@extends('layouts.content')
 @extends('layouts.header')
+@extends('layouts.footer')
 @section('title_page')
 ORS
 @endsection
 @section('header')
+@endsection
+@section('body')
+@endsection
+@section('footer')
 @endsection

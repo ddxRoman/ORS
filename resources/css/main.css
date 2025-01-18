@@ -3,6 +3,9 @@ body {
     margin-left: 5%;
     margin-right: 5%;
 }
+.all-page{
+background-color: #d2e4dc;
+}
 .wrapper{
 margin-left: 5%;
 margin-right: 5%;
@@ -11,8 +14,11 @@ margin-right: 5%;
     /* border: 1px solid rgb(255, 0, 0); */
 }
 header{
-    height: 12%;
-    margin-top: 0.4em;
+
+    border: 2px solid #3a9e1c;
+    height: 9em;
+    margin-top: 0.7em;
+    background-color: rgba(255, 255, 255, 0.185);
 }
 .header {
     background-color: rgba(0, 0, 0, 0.03);
@@ -50,12 +56,50 @@ header{
     height: 5%;
 }
 .misPanel-hr {
-    margin: 3px 5px 7px;
-    width: 85%;
-    height: 3%;
-    background-image: radial-gradient(farthest-side at 50% -50%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    margin: 5px;
+    width: 99%;
+    height: 25px;
+    background-image: radial-gradient(farthest-side at 50% -50%, rgba(0, 0, 0, 1.5), rgba(0, 0, 0, 0));
     position: relative;
     border: none;
     
 }
+.footer-hr{
+    height: 2px;
+    background-color: rgba(105, 105, 105, 0.658);
+    width: 115%;
+    margin-left: -7%;
+    margin-top: 1%;
+}
+.footer {
+    align-content: start;
+    justify-content: end;
+    position: absolute;
+    bottom: 10;
+    width: 90%;
+}
 
+/* Тут стили погоды */
+
+.refresh{
+    justify-self: center;
+    align-items: center;
+}
+.ink{
+    text-align: center;
+    color: #818181;
+    font-size: small;
+ }
+ .ink img{
+     width: 24px;
+     height: 24px;
+ }
+ .clock {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 30px;
+    font-size: calc(24px+16*(100vw));
+    padding-right: 10px;
+    padding-top: 20px;
+}
