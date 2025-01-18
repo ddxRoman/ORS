@@ -47,13 +47,13 @@
                             <div class="center_section_header">
                                 <!--  Просто кнопка на Хелпер -->
                                 @if(Request::is('/'))
-                                <a href="admin" target="_self">
+                                <a href="{{route('admin')}}" target="_self">
                                     <!--  Просто кнопка на Админка -->
                                     <button class="center-section-header_button">Админка</button>
                                 </a><!--  Просто кнопка на Админку-->
         @endif
         @if(Request::is('admin'))
-        <a href="/" target="_self">
+        <a href="{{route('home')}}" target="_self">
                     <!--  Просто кнопка на Хелпер -->
                     <button class="center-section-header_button">Панель</button>
                 </a><!--  Просто кнопка на Хелпер --> 
@@ -95,7 +95,7 @@
             <a href="https://s2.hostiman.ru/phpmyadmin/index.php"><button class="mis-panel-button">База Данных</button></a>
             <a href="https://my.hostiman.ru/cabinet/services/shared/files/245637"><button class="mis-panel-button">Менеджер файлов</button></a>
             <a href="folders/TgBotForm.php" target="1"><button class="mis-panel-button">Бот</button></a>
-            <a href="finance" target="_blank"><button class="mis-panel-button">Финансы</button></a>
+            <a href="{{route('finance')}}" target="_blank"><button class="mis-panel-button">Финансы</button></a>
            </div>
            @endif
     </div>
