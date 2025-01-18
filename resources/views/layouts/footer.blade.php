@@ -6,7 +6,7 @@
         <div class="col-3">   
              <div>
         <? 
-        // require_once 'function/weather.php'; 
+        require_once 'modules/weather.php'; 
         ?>
     </div>
 </div>
