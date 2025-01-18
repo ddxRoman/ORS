@@ -10,3 +10,20 @@
     border-color: rgb(187, 167, 159);
     border-radius: 15px;
 }
+.button_autorization {
+    height: 30px;
+    margin-top: 10px;
+    background-color: #519e87;
+    border-color: #f19426;
+    border-radius: 11px;
+    width: 150px;
+  }
+  
+   .button_autorization:hover {
+    height: 30px;
+    margin-top: 10px;
+    background-color: #1dd8a0;
+    border-color: #c2863c;
+    border-radius: 11px;
+    width: 150px;
+  }

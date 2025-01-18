@@ -1,3 +1,23 @@
+.autorization_page_body{
+    background: linear-gradient(90deg, blue, pink);
+   }
+   .error-msg-auth{
+    color: red;
+    font-size: large;
+    font-weight: 700;
+    border: 3px solid rgb(241, 132, 132);
+   }
+   .auth-page-h2{
+    color: rgba(0, 0, 0, 0.253);
+    text-align: center;
+}
+.autorization_page_body input{
+background-color: #c7fff8;
+color: rgb(82, 73, 0);
+font-weight: 600;
+width: 40%;
+height: 25px;
+}
 body {
     height: 100%;
     margin-left: 5%;
