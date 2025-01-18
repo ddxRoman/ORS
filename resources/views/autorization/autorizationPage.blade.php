@@ -1,4 +1,4 @@
-<form action="{{route('autorization-form')}}" method="post">
+<form action="{{route('autorization-form')}}" method="get">
     @csrf
     <div class="form-group">
         <label for="name">Логин</label>

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,4 @@ Route::get('finance', function () {
 Route::get('login', function () {
     return view('autorization.autorizationPage');
 })->name('autorization');
-Route::post('autorization/submit', function () {
-    return "Hello";
-})->name('autorization-form');
+Route::get('autorization/submit', 'App\Http\Controllers\AutorizationController@submit' )->name('autorization-form');
