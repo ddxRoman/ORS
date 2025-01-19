@@ -9,7 +9,7 @@ use App\Http\Requests\ErrorRequest;
 class AutorizationController extends Controller
 {
     public function submit(ErrorRequest $auth){
-// dd ($auth->input('name'), $auth->input('password'), \Request::ip());
+dd ($auth->input('name'), $auth->input('password'), \Request::ip());
 
 
     }

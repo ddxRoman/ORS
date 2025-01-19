@@ -21,25 +21,29 @@ $currentTime = time();
             $temp = $data->main->temp_max;
             $temp = (int)$temp;
             if($data->weather[0]->description=="облачно с прояснениями"){ // Облачность
-                ?> <img src="file/icons/weather/partly cloudy.png" width="30px"><?
-            }else{
+                ?> <img src="../storage/weather-icon/partly_cloudy.png" width="30px"><?
+            }else{ 
                 if($data->weather[0]->description=="гроза") {
-                ?><img src="file/icons/weather/Storm.png" width="30px"><?
+                ?><img src="../storage/weather-icon/Storm.png" width="30px"><?
                 
                 }   else{if($data->weather[0]->description=="переменная облачность"){
-                    ?> <img src="../file/icons/weather/partly cloudy.png" width="30px"><?
+                    ?> <img src="../storage/weather-icon/partly cloudy.png" width="30px"><?
                 }else{if($data->weather[0]->description=="ясно"){
-                    ?> <img src="../file/icons/weather/Sun.png" width="30px"><?
+                    ?> <img src="../storage/weather-icon/Sun.png" width="30px"><?
                 }else{
                     if($data->weather[0]->description=="небольшая облачность"){
-                        ?> <img src="../file/icons/weather/littlBigCloud.png" width="30px"><?
+                        ?> <img src="../storage/weather-icon/littlBigCloud.png" width="30px"><?
                 } else  if($data->weather[0]->description=="небольшой проливной дождь"){
-                    ?> <img src="../file/icons/weather/small_rain.png" width="30px"><?
+                    ?> <img src="../storage/weather-icon/small_rain.png" width="30px"><?
                 }
                 else if($data->weather[0]->description=="небольшой дождь"){
-                    ?> <img src="../file/icons/weather/small_rain.png" width="30px"><?
+                    ?> <img src="../storage/weather-icon/small_rain.png" width="30px"><?
                 }
-                else
+                else if($data->weather[0]->description=="пасмурно"){
+                    ?> <img src="../storage/weather-icon/cloud.png" width="30px"><?
+                }
+                else 
+                
             echo ucwords($data->weather[0]->description); 
                 }
             }
@@ -47,7 +51,7 @@ $currentTime = time();
     }
             ?>
         <font class="temperature"><?php echo $temp; ?>°C </font> <br><!-- Температура -->
-   <font class="other_parameters"><img src="file/icons/weather/wett.png" width="20px"> <?php echo $data->main->humidity; ?> % <!-- Влажность -->
-    <img src="file/icons/weather/wind.png" width="20px"><?php echo $data->wind->speed; ?> м/с<br><!-- Скорость ветра --></font>
+   <font class="other_parameters"><img src="../storage/weather-icon/wett.png" width="20px"> <?php echo $data->main->humidity; ?> % <!-- Влажность -->
+    <img src="../storage/weather-icon/wind.png" width="20px"><?php echo $data->wind->speed; ?> м/с<br><!-- Скорость ветра --></font>
 
 

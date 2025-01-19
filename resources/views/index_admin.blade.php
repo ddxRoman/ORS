@@ -1,3 +1,13 @@
 @extends('layouts.header')
+@section('layouts.header')
+@extends('layouts.footer')
+@endsection
+@section('title_page')
+ORS
+@endsection
 @section('header')
+@endsection
+@section('body')
+@endsection
+@section('footer')
 @endsection
