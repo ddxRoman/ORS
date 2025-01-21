@@ -5,12 +5,21 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\ErrorRequest;
-
-class AutorizationController extends Controller
+use App\Models\autorization;
+use App\Http\Controllers\DB;
+class autorizationController extends Controller
 {
     public function submit(ErrorRequest $auth){
-dd ($auth->input('name'), $auth->input('password'), \Request::ip());
 
+         $autorization = new autorization();
+ $autorization->error = 'Успешная авторизация';
+ $autorization->login = $auth->input('login');
+ $autorization->password = $auth->input('password');
+ $autorization->ip = \Request::ip();
+ 
 
-    }
+ $autorization->save();
+
+}
+ 
 }

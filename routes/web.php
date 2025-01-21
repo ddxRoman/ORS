@@ -14,16 +14,8 @@ use App\Http\Controllers\Controller;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
-Route::get('admin', function () {
-    return view('index_admin');
-})->name('admin');
-Route::get('finance', function () {
-    return view('finance.finance');
-})->name('finance');
-Route::get('login', function () {
-    return view('autorization.autorizationPage');
-})->name('autorization');
-Route::get('autorization/submit', 'App\Http\Controllers\AutorizationController@submit' )->name('autorization-form');
+Route::get('/', function () {    return view('index');})->name('home');
+Route::get('admin', function () {    return view('index_admin');})->name('admin');
+Route::get('finance', function () {    return view('finance.finance');})->name('finance');
+Route::get('login', function () {    return view('autorization.autorizationPage');})->name('autorization');
+Route::post('autorization/submit', 'App\Http\Controllers\autorizationController@submit')->name('autorization-form');

@@ -4,8 +4,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ORS</title>
 </head>
@@ -20,7 +18,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-10 text-center align-items-center">
                 <a href="https://github.com/ddxRoman">
                 <img src="{{ Storage::url('logo/Logo-autoeization.png')}}"  alt="Logo" title="ORStudio"></a>
-    <form action="{{route('autorization-form')}}" method="get">
+    <form action="{{route('autorization-form')}}" method="post">
     @csrf
         <input type="text" class="input-fluid" name="login" placeholder="Логин"><br>
         <input type="password" class="input-fluid" name="password" placeholder="Пароль"><br>

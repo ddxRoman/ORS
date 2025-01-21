@@ -23,7 +23,7 @@ class ErrorRequest extends FormRequest
     {
         return [
                 'login'=>'required|min: 3',
-                'password'=>'required|min: 8',
+                'password'=>'required|min: 5',
         ];
     }
     public function messages()
@@ -35,4 +35,5 @@ class ErrorRequest extends FormRequest
             'password.min' => 'не не не, пароль должен быть минмум 8 символов',
         ];
     }
+   
 }
