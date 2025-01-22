@@ -1,7 +1,7 @@
 <?$current_year=date("Y");?>
 <div class="footer">
     <hr class="footer-hr">
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-3">   
              <div>

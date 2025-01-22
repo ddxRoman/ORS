@@ -9,7 +9,6 @@
 </head>
 
 <body class="all-page">
-    <div class="wrapper">
         <header>
             <div class="header">
                 <div class="container-fluid">
@@ -25,9 +24,7 @@
                                 } else {
                                     echo "тут вапще щотчык не сработал";
                                 }
-
                                 ?> <p class="count_married"><?= $days ?> Дней </p>
-
                                 <?php
                                 $now = new DateTime(); // текущее время на сервере
                                 $date = DateTime::createFromFormat("Y-m-d", '2022-07-02'); // задаем дату в любом формате
@@ -37,10 +34,7 @@
                                 } else {
                                     echo "тут вапще щотчык не сработал";
                                 }
-
                                 ?> <p class="count_married"><?= $days ?> Дней </p>
-
-
                             </div>
                         </div>
                         <div class="col-6">
@@ -98,7 +92,7 @@
             <a href="{{route('finance')}}" target="_blank"><button class="mis-panel-button">Финансы</button></a>
            </div>
            @endif
-    </div>
+
 </body>
 
 </html>

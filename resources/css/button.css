@@ -27,3 +27,20 @@
     border-radius: 11px;
     width: 150px;
   }
+  .lmenu button {
+    border-color: rgb(230, 153, 123);
+    border-radius: 4px;
+    min-width: 60%;
+    margin-top: 1%;
+    font-weight: 500;
+  }
+  .lmenu button:hover {
+    border-color: rgb(204, 130, 101);
+    border-radius: 4px;
+    min-width: 62%;
+    margin: 1px;
+    font-weight: 700;
+  }
+  .lmenu ul{
+    padding: 0;
+  }

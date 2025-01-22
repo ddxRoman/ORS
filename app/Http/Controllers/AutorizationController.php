@@ -21,5 +21,8 @@ class autorizationController extends Controller
  $autorization->save();
 
 }
- 
+public function logsAuth(){
+    $logsAuth = new autorization;
+    dd($logsAuth->all());
+        }
 }

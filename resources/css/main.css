@@ -1,3 +1,7 @@
+
+    div { /* Границы всех Дивов что только есть*/
+    /* border: 1px solid rgb(255, 0, 0); */
+}
 .autorization_page_body{
     background: linear-gradient(90deg, blue, pink);
    }
@@ -29,9 +33,6 @@ background-color: #d2e4dc;
 .wrapper{
 margin-left: 5%;
 margin-right: 5%;
-}
-    div { /* Границы всех Дивов что только есть*/
-    /* border: 1px solid rgb(255, 0, 0); */
 }
 header{
 
@@ -84,6 +85,28 @@ header{
     border: none;
     
 }
+
+.lmenu {
+    font-weight: 700;
+    margin-top: 10px;
+    background-color: #15721800;
+    padding: 0;
+}
+iframe {
+    width: 98%;
+    height: 90%;
+    border: 0px;
+}
+.frame{
+    height: 470px;
+    border: 0px;
+}
+.rmenu {
+    border: 3px solid rgba(0, 255, 221, 0.356);
+    display: grid;
+    height: 100%;
+}
+
 .footer-hr{
     height: 2px;
     background-color: rgba(105, 105, 105, 0.658);
