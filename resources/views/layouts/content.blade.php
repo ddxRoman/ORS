@@ -7,7 +7,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-2 lmenu">
-<ul>
+                    @if(Request::is('/'))
+                    <ul>
     @foreach($lists_sites as $sites)
 
 <a href="finance" target="1"><button>{{$sites->name}}</button></a><br>
@@ -15,25 +16,27 @@
 </ul>
 
 
+@endif
+</div>
+<div class="col-7">
+    <div class="container frame"> 
+        <iframe name="center_frame" src="">
+            
+            </iframe>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="rmenu">
+            <h4>Rmenu</h4>
+            <script src="{{URL::to('taskmanager')}}">
+                
+                </script>
                 </div>
-                <div class="col-7">
-                <div class="container frame"> 
-            <iframe name="1" src="">
-                    
-                </iframe>
             </div>
-                </div>
-                <div class="col-3">
-                <div class="rmenu">
-                    <h4>Rmenu</h4>
-                    <script src="{{URL::to('taskmanager')}}">
 
-                    </script>
-                </div>
-                </div>
-            </div>
-        </div> <!-- Начало Тела сайта -->
-
+        </div>
+    </div> <!-- Начало Тела сайта -->
+    
 
 
 

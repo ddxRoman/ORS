@@ -1,13 +1,14 @@
+@extends('layouts.content')
 @extends('layouts.header')
-@section('layouts.header')
 @extends('layouts.footer')
-@endsection
 @section('title_page')
 ORS
 @endsection
+<div class="wrapper">
 @section('header')
 @endsection
-@section('body')
+@section('content')
 @endsection
 @section('footer')
 @endsection
+</div>

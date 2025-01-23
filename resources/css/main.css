@@ -146,3 +146,63 @@ iframe {
     padding-right: 10px;
     padding-top: 20px;
 }
+
+
+
+/*-------------------------------------------- admin-------------------------------------------- */
+
+.form_addCreeds{
+    padding: 3% 0 0 2%;
+    width: 700px;
+    height: 150px;
+}
+.form_addCreeds input, select{
+    height: 25px;
+    width: 155px;
+    background-color: rgba(0, 255, 255, 0.171);
+    font-weight: 800;
+    color: #000;
+}
+.edit_creeds{
+    margin: 3%;
+}
+.btn_img_creeds img{
+    width: 32px;
+    height: 32px;
+}
+.btn_img_creeds{
+text-align: right;
+padding-right: 50px;
+}
+
+.table_addsite {
+
+width: 400px;
+
+border-collapse: collapse;
+
+border: 2px solid white;
+
+}
+
+.table_addsite td {
+
+padding: 3px;
+
+border: 1px solid ;
+
+text-align: left;
+
+}
+img{
+    width: 24px;
+}
+td .table_sile{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}

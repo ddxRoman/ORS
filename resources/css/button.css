@@ -44,3 +44,29 @@
   .lmenu ul{
     padding: 0;
   }
+
+
+
+/*-------------------------------------------- admin-------------------------------------------- */
+
+
+  .add_creeds_btn{
+    background-color: #f19426;
+    color: #eee;
+    font-weight: 700;
+      border-radius: 25px;
+      margin-top: 1%;
+      width: 25%;
+      height: 35px;
+    margin-left: 70%;
+    }
+    .add_creeds_btn:hover{
+      background-color: #f08f19;
+      color: #ffffff;
+      font-weight: 900;
+        border-radius: 30px;
+        margin-top: 1%;
+        width: 26%;
+        height: 38px;
+      margin-left: 70%;
+      }
