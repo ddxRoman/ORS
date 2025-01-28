@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Creeds;
 use Illuminate\Http\Request;
+use App\Models\Creeds;
 use App\Http\Requests\ErrorRequest;
 
 class CreedsController extends Controller
@@ -13,7 +13,7 @@ class CreedsController extends Controller
         return view('creeds_lists', ['lists_creeds'=> Creeds::all()]);
         
     }
-    public function submit(ErrorRequest $creeds){
+    public function submit(Request $creeds){
 
 $autorization = new Creeds();
 $autorization->name = $creeds->input('name');

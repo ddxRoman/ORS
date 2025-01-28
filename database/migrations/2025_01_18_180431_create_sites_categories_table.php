@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sites_categories', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
             $table->string('name');
             $table->bigInteger('sequence_number');
             $table->string('link');

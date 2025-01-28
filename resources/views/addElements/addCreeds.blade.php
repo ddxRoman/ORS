@@ -9,6 +9,8 @@
 </head>
 <body>
     <div class="form_addCreeds">
+        
+
         <form action="{{route('addcreeds-form')}}" method="post" >
         @csrf
             <input  name="name" placeholder="NameSite">
@@ -17,6 +19,8 @@
             <input  name="password" placeholder="password"><br>
             <button class="add_creeds_btn">Сохранить</button>
         </form>
+
+
     </div>
 
     <div class="edit_creeds">
@@ -31,13 +35,13 @@
     <tbody>
 @foreach($addCreeds as $creeds)
         <tr>
-            <th><a href="{{$creeds->URL}}" class="link-dark" target="_blank">{{$creeds->name }}</a> </th>
-            <th class="btn_img_creeds">
+            <th><a href="{{$creeds->URL}}" class="link-dark" title="{{$creeds->URL}} - {{$creeds->Login}} - {{$creeds->Password}}" target="_blank">{{$creeds->name }}</a> </th>
+            <th class="btn_img_edit">
                 <a href="">
-                    <img  src="{{ Storage::url('icon/edit-pen.svg') }}" alt="">
+                    <img class="special_icon" src="{{ Storage::url('icon/edit-pen.svg') }}" alt="">
                 </a>
                 <a href="">
-                    <img  src="{{ Storage::url('icon/delete.svg') }}" alt="">
+                    <img class="special_icon" src="{{ Storage::url('icon/delete.svg') }}" alt="">
                 </a>
             </th>
 

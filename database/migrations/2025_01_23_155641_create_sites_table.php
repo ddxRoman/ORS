@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\models\autorization;
 
 return new class extends Migration
 {
@@ -12,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('autorization', function (Blueprint $table) {
+        Schema::create('sites', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('error');
-            $table->string('login');
-            $table->string('password');
-            $table->bigInteger('ip');
+            $table->string('name');
+            $table->string('URL');
+            $table->string('sites_categorie_id');
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('autorization');
+        Schema::dropIfExists('sites');
     }
 };

@@ -153,8 +153,8 @@ iframe {
 
 .form_addCreeds{
     padding: 3% 0 0 2%;
-    width: 700px;
-    height: 150px;
+
+
 }
 .form_addCreeds input, select{
     height: 25px;
@@ -166,7 +166,7 @@ iframe {
 .edit_creeds{
     margin: 3%;
 }
-.btn_img_creeds img{
+.btn_img_edit img{
     width: 32px;
     height: 32px;
 }
@@ -194,7 +194,7 @@ border: 1px solid ;
 text-align: left;
 
 }
-img{
+img .special_icon{
     width: 24px;
 }
 td .table_sile{

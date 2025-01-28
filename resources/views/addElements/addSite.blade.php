@@ -6,47 +6,36 @@
 
 <body>
     <div class="form_addCreeds">
-        <form action="../action/addsiteList.php" method="post">
-            <input type="text" placeholder="URL" name="url">
-            <input type="text" placeholder="name" name="name">
-            <select name="categories">
-                <option value="">Категория</option>
-
+        <form action="{{route('add-site-form')}}" method="post" >
+        @csrf
+            <input  name="name" placeholder="name">
+            <input  name="URL" placeholder="URL">
+            <select name="sites_categorie_id" id="">
+                <option value="Документы">1</option>
+                <option value="Миски">2</option>
+                <option value="Сайты">3</option>
             </select>
-            <button class="add_creeds_btn">Добавить</button>
+            <button class="add_creeds_btn">Сохранить</button>
         </form>
+        
     </div>
-    <table class="table_addsite">
+    <table class="table table-hover">
         <tr>
-            <th>id</th>
             <th>Название</th>
-            <th class="table_sile" >URL</th>
             <th>Папка</th>
         </tr>
         <div class="sitelist">
-                <tr class="site_table">
-                    <td></td>
-                    <td></td>
-                    <td class="table_sile"> <a href="" target="_blank"> <?= $sites[2] ?></a></td>
-                    <td></td>
+            @foreach($addSites as $site)
+                <tr class="site_table btn_img_edit">
+                    <td title="{{$site->URL}}"><a href="{{$site->URL}}">{{$site->name}}</a></td>
+                    <td>{{$site->sites_categorie_id}}</td>
                     <td>
-                        <a href=""><img class="icon" src="../file/icons/edit-svgrepo-com.svg" title="Редактировать"></a>
+                        <a href=""><img class="special_icon" src="{{ Storage::url('icon/edit-site.svg') }}" title="Редактировать"></a>
                     </td>
                     <td>
-<script type="text/javascript"> 
-$("#submit").click(function () { 
-    var name = $("#name").val(); 
-    var marks = $("#marks").val(); 
-    var str = "You Have Entered " 
-        + "Name: " + name 
-        + " and Marks: " + marks; 
-    $("#modal_body").html(str); 
-}); 
-</script> 
                 </tr>
+                @endforeach
     </table>
-
-
     </div>
 </body>
 
