@@ -45,6 +45,8 @@ Route::get('taskmanager', function () {    return view('taskmanager.taskmanagerA
 
 Route::post('autorization/submit', 'App\Http\Controllers\autorizationsController@submit')->name('autorization-form');
 Route::post('addsite/submit', 'App\Http\Controllers\SitesController@submit')->name('add-site-form');
+Route::post('tgbot/submit', 'App\Http\Controllers\SitesController@submit')->name('tgbot-form');
+Route::post('TgBotSend', 'App\Http\Controllers\TgBotController@send')->name('TgBotSend');
 Route::post('addcreeds/submit', 'App\Http\Controllers\CreedsController@submit', 
 function(){
     return redirect('addCreeds');    //Я ХЗ,  в ДОке написано что это дложно работать, а оно не работает

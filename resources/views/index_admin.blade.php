@@ -2,7 +2,7 @@
 @extends('layouts.header')
 @extends('layouts.footer')
 @section('title_page')
-ORS
+ORS Adminka
 @endsection
 <div class="wrapper">
 @section('header')

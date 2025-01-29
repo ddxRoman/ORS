@@ -4,6 +4,7 @@
 @vite(['resources/css/button.css'])
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="{{ url('favicon.ico') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ORS</title>
 </head>
@@ -92,7 +93,5 @@
             <a href="{{route('finance')}}" target="_blank"><button class="mis-panel-button">Финансы</button></a>
            </div>
            @endif
-
 </body>
-
 </html>
