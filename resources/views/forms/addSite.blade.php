@@ -32,7 +32,6 @@
                     <td>
                         <a href=""><img class="special_icon" src="{{ Storage::url('icon/edit-site.svg') }}" title="Редактировать"></a>
                     </td>
-                    <td>
                 </tr>
                 @endforeach
     </table>

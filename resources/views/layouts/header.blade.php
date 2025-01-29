@@ -88,7 +88,7 @@
             <a href="{{route('addsite')}}" target="center_frame"><button class="mis-panel-button">Добавить сайт</button></a>
             <a href="https://s2.hostiman.ru/phpmyadmin/index.php"><button class="mis-panel-button">База Данных</button></a>
             <a href="https://my.hostiman.ru/cabinet/services/shared/files/245637"><button class="mis-panel-button">Менеджер файлов</button></a>
-            <a href="folders/TgBotForm.php" target="center_frame"><button class="mis-panel-button">Бот</button></a>
+            <a href="{{route('tgbot')}}" target="center_frame"><button class="mis-panel-button">Бот</button></a>
             <a href="{{route('finance')}}" target="_blank"><button class="mis-panel-button">Финансы</button></a>
            </div>
            @endif

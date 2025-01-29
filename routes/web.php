@@ -16,8 +16,8 @@ use App\Models\Sites;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
-|
 */
+
 
 Route::get('/', function () {
     return view('index', ['lists_sites'=>sites_categorie::all()], ['docs_lists'=>sites_categorie::all()]);
@@ -27,11 +27,14 @@ Route::get('creeds_lists', function () {
 })->name('creeds_lists');
 
 Route::get('addCreeds', function () {
-    return view('addElements.addCreeds', ['addCreeds'=>Creeds::all()]);
+    return view('forms.addCreeds', ['addCreeds'=>Creeds::all()]);
 })->name('addCreeds');
 Route::get('addsite', function () {
-    return view('addElements.addsite', ['addSites'=>Sites::all()]);
+    return view('forms.addsite', ['addSites'=>Sites::all()]);
 })->name('addsite');
+Route::get('tg-bot', function () {
+    return view('forms.tgbot');
+})->name('tgbot');
 
 
 Route::get('admin', function () {    return view('index_admin');})->name('admin');
@@ -45,10 +48,7 @@ Route::post('addsite/submit', 'App\Http\Controllers\SitesController@submit')->na
 Route::post('addcreeds/submit', 'App\Http\Controllers\CreedsController@submit', 
 function(){
     return redirect('addCreeds');    //Я ХЗ,  в ДОке написано что это дложно работать, а оно не работает
-} 
+}
 )->name('addcreeds-form');
-
-
-
 
 // ----------------------------Тест связи 1 к многим-------------------------------------------------------------------------------------------------------
