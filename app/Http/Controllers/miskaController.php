@@ -4,12 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\miska;
+use Illuminate\Support\Facades\DB;
 
 class miskaController extends Controller
 {
 public function view(){
-    return ("Hello Wrld");
+    
+    $users = DB::table('sites')->where('sites_categorie_id', 'Миски')->get();
 
+    foreach ($users as $user) {
+        echo $user->name."<br>";
+    }
         }
     }

@@ -11,9 +11,9 @@
             <input  name="name" placeholder="name">
             <input  name="URL" placeholder="URL">
             <select name="sites_categorie_id" id="">
-                <option value="Документы">1</option>
-                <option value="Миски">2</option>
-                <option value="Сайты">3</option>
+                <option value="Документы">Документы</option>
+                <option value="Миски">Миски</option>
+                <option value="Сайты">Сайты</option>
             </select>
             <button class="add_creeds_btn">Сохранить</button>
         </form>
