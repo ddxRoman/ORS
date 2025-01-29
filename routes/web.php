@@ -39,11 +39,14 @@ Route::get('tg-bot', function () {
 
 Route::get('admin', function () {    return view('index_admin');})->name('admin');
 Route::get('finance', function () {    return view('finance.finance');})->name('finance');
+Route::get('underway', function () {    return view('Errors_blade.underway');})->name('underway');
 Route::get('login', function () {    return view('autorization.autorizationPage');})->name('autorization');
 Route::get('taskmanager', function () {    return view('taskmanager.taskmanagerAccordion');})->name('taskmanager');
 
 
 Route::post('autorization/submit', 'App\Http\Controllers\autorizationsController@submit')->name('autorization-form');
+// Route::post('miska', 'App\Http\Controllers\miskaController@view')->name('miska');
+Route::get('miska', 'App\Http\Controllers\miskaController@view')->name('miska');
 Route::post('addsite/submit', 'App\Http\Controllers\SitesController@submit')->name('add-site-form');
 Route::post('tgbot/submit', 'App\Http\Controllers\SitesController@submit')->name('tgbot-form');
 Route::post('TgBotSend', 'App\Http\Controllers\TgBotController@send')->name('TgBotSend');

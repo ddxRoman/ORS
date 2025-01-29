@@ -11,7 +11,7 @@
                     <ul>
     @foreach($lists_sites as $sites)
 
-<a href="finance" target="1"><button>{{$sites->name}}</button></a><br>
+<a href="{{route($sites->link)}}" target="center_frame"><button>{{$sites->name}}</button></a><br>
 @endforeach
 </ul>
 
