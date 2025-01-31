@@ -77,9 +77,9 @@
             <a href="https://mail.google.com" target="_blank"><button class="mis-panel-button">Почта</button></a>
             <a href="https://topvisor.com/projects/" target="_blank"><button class="mis-panel-button"><b>TOP</b><i>visor</i></button></a>
             <a href="https://jira.bizonoff-dev.net/secure/Dashboard.jspa" target="_blank"><button class="mis-panel-button">Наша Жира</button></a>
-            <!-- <a href="folders/CsdTasks.php" target="_blank"><button>Задачи</button></a> -->
             <a href="folders/countsymbolForm.php" target="center_frame"><button class="mis-panel-button">Подсчёт</button></a>
             <a href="{{route('creeds_lists')}}" target="center_frame"><button class="mis-panel-button">Доступы</button></a>
+
            </div><!-- Тут заканчивается МИС панель-->
         <hr class="misPanel-hr"><!-- ХРка полоска -->
 @elseif(Request::is('admin'))

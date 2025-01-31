@@ -275,3 +275,50 @@ input:-ms-input-placeholder {
     background-color: #5EB5F7;
     color: black;
 }
+/*------------------------------------------------- Finance---------------------------------------------------------- */
+.month_ul_reports li{
+    display: inline;
+        text-decoration: none;
+        list-style-type: none;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        padding-top: 0.5%;
+        font-weight: 700;
+        font-size: 9pt;
+    }
+    .reports_link_block{
+        margin-top: 1%;
+        }
+        .common-Filter_btn{
+            margin: -2%;
+        }
+        .month_line{
+            padding-top: 0.5%;
+        }
+        .month_ul_reports li{
+            display: inline;
+                text-decoration: none;
+                list-style-type: none;
+                margin-left: 2.5%;
+                margin-right: 2.5%;
+                padding-top: 0.5%;
+                font-weight: 700;
+                font-size: 9pt;
+            }
+            .current_month{
+                color: rgb(0, 0, 0);
+                font-weight: 900;
+                background-color: rgb(179, 206, 255);
+                border: 2px solid rgb(109, 209, 216);
+            }
+            .current_month_reports{
+                color: rgb(217, 255, 0);
+                font-weight: 900;
+                background-color: rgb(99, 99, 99);
+                border: 2px solid rgb(109, 209, 216);
+            }
+        .current_month li{
+            display: inline;
+            text-decoration: none;
+            list-style-type: none;
+        }

@@ -1,3 +1,3 @@
-@extends('Errors_blade.underway')
-@section('body_error')
+@extends('layouts.finance.financeHeader')
+@section('financeHeader')
 @endsection

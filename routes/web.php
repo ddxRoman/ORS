@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\sites_categorie;
 use App\Models\Creeds;
 use App\Models\Sites;
+use App\Http\Controllers\SitesviewController;
 
 
 /*
@@ -45,8 +46,11 @@ Route::get('taskmanager', function () {    return view('taskmanager.taskmanagerA
 
 
 Route::post('autorization/submit', 'App\Http\Controllers\autorizationsController@submit')->name('autorization-form');
-// Route::post('miska', 'App\Http\Controllers\miskaController@view')->name('miska');
 Route::get('miska', 'App\Http\Controllers\miskaController@view')->name('miska');
+
+Route::get('/search-{No}',[SitesviewController::class, 'view'])->name('websearch');
+
+
 Route::post('addsite/submit', 'App\Http\Controllers\SitesController@submit')->name('add-site-form');
 Route::post('tgbot/submit', 'App\Http\Controllers\SitesController@submit')->name('tgbot-form');
 Route::post('TgBotSend', 'App\Http\Controllers\TgBotController@send')->name('TgBotSend');

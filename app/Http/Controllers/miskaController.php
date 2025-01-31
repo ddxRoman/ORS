@@ -13,7 +13,7 @@ public function view(){
     $users = DB::table('sites')->where('sites_categorie_id', 'Миски')->get();
 
     foreach ($users as $user) {
-        echo "<a href=".$user->URL.">"."<button>".$user->name."</button></a><br>";
+        echo "<a href=".$user->URL.">"."<button class='btn-in-folders'>".$user->name."</button></a>";
     }
         }
     }

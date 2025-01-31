@@ -1,8 +1,5 @@
-
-
-    @vite(['resources/js/app.js','resources/css/main.css'])
+@vite(['resources/js/app.js','resources/css/main.css'])
 @vite(['resources/css/button.css'])
-
     <div class="body">  
         <div class="container-fluid">
             <div class="row">
@@ -10,12 +7,12 @@
                     @if(Request::is('/'))
                     <ul>
     @foreach($lists_sites as $sites)
+<?
+ $category=$sites->link?>
+<a href="{{ route('websearch', ['No'=>$category]) }}" target="center_frame"><button>{{$sites->name}}</button></a><br>
 
-<a href="{{route($sites->link)}}" target="center_frame"><button>{{$sites->name}}</button></a><br>
 @endforeach
 </ul>
-
-
 @endif
 </div>
 <div class="col-7">
@@ -33,13 +30,6 @@
                 </script>
                 </div>
             </div>
-
         </div>
     </div> <!-- Начало Тела сайта -->
-    
-
-
-
-
-
         </div>

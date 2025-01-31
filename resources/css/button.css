@@ -44,7 +44,12 @@
   .lmenu ul{
     padding: 0;
   }
-
+.btn-in-folders{
+  background-color: #1dd8a0;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+}
 
 
 /*-------------------------------------------- admin-------------------------------------------- */
