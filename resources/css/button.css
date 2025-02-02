@@ -75,3 +75,24 @@
         height: 38px;
       margin-left: 70%;
       }
+      .delete_site_btn{
+    background-color: #f12626c9;
+    color: #eee;
+    font-weight: 700;
+      border-radius: 25px;
+      margin-top: 1%;
+      width: 25%;
+      height: 35px;
+    margin-left: 70%;
+    }
+    .delete_site_btn:hover{
+      background-color: #f01919;
+      color: #ffffff;
+      font-weight: 900;
+        border-radius: 30px;
+        margin-top: 1%;
+        width: 26%;
+        height: 38px;
+      margin-left: 70%;
+      
+      }

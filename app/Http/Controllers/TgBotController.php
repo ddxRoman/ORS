@@ -20,7 +20,7 @@ $validatedData=$request->validate([
             \Illuminate\Support\Facades\Http::post('https://api.telegram.org/bot6048362058:AAFv50Fltmm_0Ufa-GYzAga-poK1-niyxVo/sendMessage',
             ['chat_id'=>env('CHAT_ID'),
             'text'=> $text, 
-            'file'=>$validatedData["url"],
+            'file'=>$validatedData['url'],
             'parse_mode'=>'html'
             ]);
             return redirect()->route("tgbot");

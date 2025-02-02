@@ -8,7 +8,7 @@
                     <ul>
     @foreach($lists_sites as $sites)
 <?
- $category=$sites->link?>
+ $category=$sites->name?>
 <a href="{{ route('websearch', ['No'=>$category]) }}" target="center_frame"><button>{{$sites->name}}</button></a><br>
 
 @endforeach

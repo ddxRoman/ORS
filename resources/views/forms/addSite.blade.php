@@ -14,6 +14,9 @@
                 <option value="Документы">Документы</option>
                 <option value="Миски">Миски</option>
                 <option value="Сайты">Сайты</option>
+                <option value="Папки">Папки</option>
+                <option value="Старьё">Старьё</option>
+                <option value="Техническое">Техническое</option>
             </select>
             <button class="add_creeds_btn">Сохранить</button>
         </form>
@@ -30,7 +33,7 @@
                     <td title="{{$site->URL}}"><a href="{{$site->URL}}">{{$site->name}}</a></td>
                     <td>{{$site->sites_categorie_id}}</td>
                     <td>
-                        <a href=""><img class="special_icon" src="{{ Storage::url('icon/edit-site.svg') }}" title="Редактировать"></a>
+                        <a href="{{route('edit-site-form', $site->id)}}"><img class="special_icon" src="{{ Storage::url('icon/edit-site.svg') }}" title="Редактировать"></a>
                     </td>
                 </tr>
                 @endforeach
