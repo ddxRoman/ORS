@@ -17,7 +17,7 @@ $validatedData=$request->validate([
 'comments'=>'string'
 ]); 
    $text="<b>Дата: </b>{$validatedData['data']}\n<b>Праздник: </b>{$validatedData['holiday']}\n<b>Подпись:    </b>{$validatedData['description']}\n<b>Коммент: </b>{$validatedData['comments']} ";
-            \Illuminate\Support\Facades\Http::post('https://api.telegram.org/bot6048362058:AAFv50Fltmm_0Ufa-GYzAga-poK1-niyxVo/sendMessage',
+            \Illuminate\Support\Facades\Http::post('',
             ['chat_id'=>env('CHAT_ID'),
             'text'=> $text, 
             'file'=>$validatedData['url'],
