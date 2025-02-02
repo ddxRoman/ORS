@@ -46,13 +46,16 @@ Route::get('countsymbol', function () {    return view('folders.count_symbol');}
 Route::get('taskmanager', function () {    return view('taskmanager.taskmanagerAccordion');})->name('taskmanager');
 Route::get('/search-{No}',[SitesviewController::class, 'view'])->name('websearch');
 
-
 Route::post('autorization/submit', 'App\Http\Controllers\autorizationsController@submit')->name('autorization-form');
 Route::post('countsymbol/count', 'App\Http\Controllers\CountSymbolTxtController@CountSymbol')->name('count-form');
 
 Route::get('editSite-{id}', 'App\Http\Controllers\SitesController@editSite')->name('edit-site-form');
 Route::post('editSite-{id}', 'App\Http\Controllers\SitesController@editSiteSubmit')->name('edit-site');
 Route::get('deleteSites-{id}', 'App\Http\Controllers\SitesController@deleteSite')->name('delete-site');
+
+Route::get('editCreed-{id}', 'App\Http\Controllers\CreedsController@editcreed')->name('edit-creed-form');
+Route::post('editCreed-{id}', 'App\Http\Controllers\CreedsController@editCreedSubmit')->name('editCreed');
+Route::get('deleteCreed-{id}', 'App\Http\Controllers\CreedsController@deletecreed')->name('delete-creed');
 
 Route::post('addsite/submit', 'App\Http\Controllers\SitesController@submit')->name('add-site-form');
 Route::post('tgbot/submit', 'App\Http\Controllers\SitesController@submit')->name('tgbot-form');

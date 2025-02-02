@@ -36,7 +36,7 @@
                         <a href="{{route('edit-site-form', $site->id)}}"><img class="special_icon" src="{{ Storage::url('icon/edit-site.svg') }}" title="Редактировать"></a>
                     </td>
                 </tr>
-                @endforeach
+            @endforeach
     </table>
     </div>
 </body>
