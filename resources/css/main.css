@@ -322,3 +322,11 @@ input:-ms-input-placeholder {
             text-decoration: none;
             list-style-type: none;
         }
+.count_symbol_form{
+        width: 100%;
+        height: 250px;
+        font-size: 14pt;
+}
+.count_page{
+    background-color: #ffffff09;
+}

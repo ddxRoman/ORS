@@ -50,7 +50,12 @@
   height: 1.5rem;
   color: white;
 }
-
+.btn_count_text{
+  border-radius: 6px;
+  background-color: midnightblue;
+  color: beige;
+  font-weight: 800;
+}
 
 /*-------------------------------------------- admin-------------------------------------------- */
 

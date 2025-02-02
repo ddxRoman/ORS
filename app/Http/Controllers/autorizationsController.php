@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Http\Requests\ErrorRequest;
 use App\Models\autorizations;
-use App\Http\Controllers\DB;
+use Illuminate\Support\Facades\Request;
 
 class autorizationsController extends Controller
 {
@@ -16,9 +15,8 @@ class autorizationsController extends Controller
  $autorization->error = 'Успешная авторизация';
  $autorization->login = $auth->input('login');
  $autorization->password = $auth->input('password');
- $autorization->ip = \Request::ip();
+ $autorization->ip = Request::ip();
  
-
  $autorization->save();
 
 }

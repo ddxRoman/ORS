@@ -16,4 +16,5 @@ class SitesviewController extends Controller
             echo "<a href=".$user->URL." target='_blank'>"."<button>".$user->name."</button></a>";
         }
             }
+            
 }
