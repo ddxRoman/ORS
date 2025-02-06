@@ -1,9 +1,10 @@
+
 @vite(['resources/js/app.js','resources/css/main.css','resources/css/taskmanager.css'])
 @vite(['resources/css/button.css'])
 <div class="body">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-2 lmenu">
+            <div class="col-3 lmenu">
                 @if(Request::is('/'))
                 <ul>
                     @foreach($lists_sites as $sites)
@@ -16,17 +17,16 @@
                     @endforeach
                     @endif
             </div>
-            <div class="col-7">
+            <div class="col-5">
                 <div class="container frame">
                     <iframe name="center_frame" src="">
 
                     </iframe>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-4">
                 <div class="rmenu">
-                    <? require_once 'modules/taskmanagerAccordion.php'; ?>
-                </div>
+@include('layouts.Taskmeneger\taskmanagerAccordion')
             </div>
         </div>
     </div> <!-- Начало Тела сайта -->

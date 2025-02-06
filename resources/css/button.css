@@ -42,10 +42,9 @@
   }
   .lmenu button:hover {
     border-color: rgb(204, 130, 101);
-    border-radius: 4px;
-    min-width: 62%;
-    margin: 1px;
-    font-weight: 700;
+    border-radius: 0 40px 40px 0;
+    min-width: 64%;
+
   }
   .lmenu ul{
     padding: 0;
