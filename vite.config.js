@@ -15,6 +15,7 @@ export default defineConfig({
                 'resources/js/app.js',
                 'resources/css/main.css',
                 'resources/css/button.css',
+                'resources/css/taskmanager.css',
             ],
             refresh: true,
         }),

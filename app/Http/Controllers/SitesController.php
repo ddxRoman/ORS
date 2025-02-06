@@ -5,11 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Sites;
-use Illuminate\Support\Facades\DB;
+
 
 class SitesController extends Controller
 {
-
 public function submit(Request $sites){
 
 $addSites = new Sites();
@@ -20,19 +19,17 @@ $addSites->sites_categorie_id = $sites->input('sites_categorie_id');
 $addSites->save();
 return redirect()->route('addsite');
 }
-public function editSite($id){
-
+public function editSite($id)
+{
     $editSites = new Sites();
     return view('forms.editSite', ['data'=>$editSites->find($id)]);
-
 }
-public function editSiteSubmit($id, Request $sites){
-
+public function editSiteSubmit($id, Request $sites)
+{
     $editSites = Sites::find($id);
     $editSites->name = $sites->input('name');
     $editSites->URL = $sites->input('URL');
     $editSites->sites_categorie_id = $sites->input('sites_categorie_id');
-    
     $editSites->save();
     return redirect()->route('addsite');
     }

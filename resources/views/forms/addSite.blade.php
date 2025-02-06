@@ -29,10 +29,10 @@
         </tr>
         <div class="sitelist">
             @foreach($addSites as $site)
-                <tr class="site_table btn_img_edit">
+                <tr class="site_table ">
                     <td title="{{$site->URL}}"><a href="{{$site->URL}}">{{$site->name}}</a></td>
                     <td>{{$site->sites_categorie_id}}</td>
-                    <td>
+                    <td class="btn_img_edit">
                         <a href="{{route('edit-site-form', $site->id)}}"><img class="special_icon" src="{{ Storage::url('icon/edit-site.svg') }}" title="Редактировать"></a>
                     </td>
                 </tr>

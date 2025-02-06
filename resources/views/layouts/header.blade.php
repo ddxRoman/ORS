@@ -72,7 +72,7 @@
         @yield('header')
         @if(Request::is('/'))
         <div class="MisPanel">
-            <a href="action/users/settings.php"><button class="mis-panel-button">Настройки</button></a>
+            <a href="{{route('settings')}}"><button class="mis-panel-button">Настройки</button></a>
             <a href="https://meet.google.com/" target="_blank"><button class="mis-panel-button">Meet</button></a>
             <a href="https://mail.google.com" target="_blank"><button class="mis-panel-button">Почта</button></a>
             <a href="https://topvisor.com/projects/" target="_blank"><button class="mis-panel-button"><b>TOP</b><i>visor</i></button></a>

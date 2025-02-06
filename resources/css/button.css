@@ -18,6 +18,12 @@
     border-radius: 11px;
     width: 150px;
   }
+  .lmenu_btn_folders{
+    background-color: #c2e3ea;
+  }
+  .lmenu_btn_link{
+    background-color: rgb(45, 216, 29);
+  }
   
    .button_autorization:hover {
     height: 30px;
@@ -57,9 +63,8 @@
   font-weight: 800;
 }
 
+
 /*-------------------------------------------- admin-------------------------------------------- */
-
-
   .add_creeds_btn{
     background-color: #f19426;
     color: #eee;

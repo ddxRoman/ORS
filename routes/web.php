@@ -8,7 +8,6 @@ use App\Models\Creeds;
 use App\Models\Sites;
 use App\Http\Controllers\SitesviewController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,14 +18,14 @@ use App\Http\Controllers\SitesviewController;
 | be assigned to the "web" middleware group. Make something great!
 */
 
-
-Route::get('/', function () {
-    return view('index', ['lists_sites'=>sites_categorie::all()], ['docs_lists'=>sites_categorie::all()]);
+Route::get('/', 
+function () {
+// 'App\Http\Controllers\sites_categoriesController@sites_categorie_view')
+return view('index', ['lists_sites'=>sites_categorie::all()], ['docs_lists'=>sites_categorie::all()]);
 })->name('home');
 Route::get('creeds_lists', function () {
     return view('folders.creeds_lists', ['creeds_lists'=>Creeds::all()]);
 })->name('creeds_lists');
-
 Route::get('addCreeds', function () {
     return view('forms.addCreeds', ['addCreeds'=>Creeds::all()]);
 })->name('addCreeds');
@@ -37,13 +36,13 @@ Route::get('tg-bot', function () {
     return view('forms.tgbot');
 })->name('tgbot');
 
-
 Route::get('admin', function () {    return view('index_admin');})->name('admin');
+Route::get('settings', function () {    return view('folders.settings');})->name('settings');
 Route::get('finance', function () {    return view('finance.finance');})->name('finance');
 Route::get('underway', function () {    return view('Errors_blade.underway');})->name('underway');
 Route::get('login', function () {    return view('autorization.autorizationPage');})->name('autorization');
 Route::get('countsymbol', function () {    return view('folders.count_symbol');})->name('count');
-Route::get('taskmanager', function () {    return view('taskmanager.taskmanagerAccordion');})->name('taskmanager');
+Route::get('helper-folder', function () {    return view('folders.helper');})->name('helper');
 Route::get('/search-{No}',[SitesviewController::class, 'view'])->name('websearch');
 
 Route::post('autorization/submit', 'App\Http\Controllers\autorizationsController@submit')->name('autorization-form');
@@ -60,6 +59,7 @@ Route::get('deleteCreed-{id}', 'App\Http\Controllers\CreedsController@deletecree
 Route::post('addsite/submit', 'App\Http\Controllers\SitesController@submit')->name('add-site-form');
 Route::post('tgbot/submit', 'App\Http\Controllers\SitesController@submit')->name('tgbot-form');
 Route::post('TgBotSend', 'App\Http\Controllers\TgBotController@send')->name('TgBotSend');
+
 Route::post('addcreeds/submit', 'App\Http\Controllers\CreedsController@submit', 
 function(){
     return redirect('addCreeds');    //Я ХЗ,  в ДОке написано что это дложно работать, а оно не работает
