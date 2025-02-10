@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\sites_categorie;
 use App\Models\Creeds;
 use App\Models\Sites;
+use App\Models\Tasks;
 use App\Http\Controllers\SitesviewController;
 
 /*
@@ -26,6 +27,9 @@ return view('index', ['lists_sites'=>sites_categorie::all()], ['docs_lists'=>sit
 Route::get('creeds_lists', function () {
     return view('folders.creeds_lists', ['creeds_lists'=>Creeds::all()]);
 })->name('creeds_lists');
+Route::get('taskmanagerAccordion', function () {
+    return view('layouts.Taskmeneger\taskmanagerAccordion', ['taskView'=> Tasks::all()]);
+})->name('tasks');
 Route::get('addCreeds', function () {
     return view('forms.addCreeds', ['addCreeds'=>Creeds::all()]);
 })->name('addCreeds');
@@ -36,6 +40,7 @@ Route::get('tg-bot', function () {
     return view('forms.tgbot');
 })->name('tgbot');
 
+
 Route::get('admin', function () {    return view('index_admin');})->name('admin');
 Route::get('settings', function () {    return view('folders.settings');})->name('settings');
 Route::get('finance', function () {    return view('finance.finance');})->name('finance');
@@ -43,10 +48,12 @@ Route::get('underway', function () {    return view('Errors_blade.underway');})-
 Route::get('login', function () {    return view('autorization.autorizationPage');})->name('autorization');
 Route::get('countsymbol', function () {    return view('folders.count_symbol');})->name('count');
 Route::get('helper-folder', function () {    return view('folders.helper');})->name('helper');
+Route::get('finance/reports', function () {    return view('folders.finance.reportsFinanse');})->name('reports_finance');
 Route::get('/search-{No}',[SitesviewController::class, 'view'])->name('websearch');
 
 Route::post('autorization/submit', 'App\Http\Controllers\autorizationsController@submit')->name('autorization-form');
 Route::post('countsymbol/count', 'App\Http\Controllers\CountSymbolTxtController@CountSymbol')->name('count-form');
+
 
 Route::get('editSite-{id}', 'App\Http\Controllers\SitesController@editSite')->name('edit-site-form');
 Route::post('editSite-{id}', 'App\Http\Controllers\SitesController@editSiteSubmit')->name('edit-site');

@@ -2,29 +2,7 @@
 <html lang="en">
 @vite(['resources/js/app.js','resources/css/main.css'])
 @vite(['resources/css/button.css'])
-<?
 
-$monthget='01';
-
-$today=date('d');
-$budget=0;
-
-$date_today = date("Y-m-d");
-$month_list = array(
-    "1" => "Январь",
-    "2" => "Февраль",
-    "3" => "Март",
-    "4" => "Апрель",
-    "5" => "Май",
-    "6" => "Июнь",
-    "7" => "Июль",
-    "8" => "Август",
-    "9" => "Сентябрь",
-    "10" => "Октябрь",
-    "11" => "Ноябрь",
-    "12" => "Декабрь",
-);
-?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,7 +21,7 @@ $month_list = array(
     <title>Финaнсовый Учёт</title>
 </head>
 
-<header>
+<header class="header_finance">
     <div class="container-fluid">
         <div class="row">
             <div class="col-5">
@@ -63,24 +41,23 @@ $month_list = array(
             </div>
             </div>
             <div class="col-3">
+            @if(Request::is('finance'))
                 <h1 class="text-center">Расходы финансов</h1>
+                @elseif(Request::is('finance/reports'))
+                <h1 class="text-center">Отчёты</h1>
+                @endif
             </div>
             <div class="col-4 reports_link_block">
-                <a href="operation/reports.php">
+            @if(Request::is('finance'))
+                <a href="{{route('reports_finance')}}">
                     <button class="common-Filter_btn">Отчёты</button>
                 </a>
+                @elseif(Request::is('finance/reports'))
+                <a href="{{route('finance')}}">
+                    <button class="common-Filter_btn">На главную</button>
+                </a>
+                @endif
             </div>
-            <?
-foreach($month_list as $month_lists) { 
-            $key = array_search ($month_lists, $month_list);
-if (($monthget==$key) || (date('m')==$key && $i==0 && $monthget<date('m'))){ 
-    $i=1;
-    ?>
-    <a class="current_month" onchange="this.form.submit()" href=""><li><?=$month_lists?></li></a> <?
-    }else{ 
-    ?><a onchange="this.form.submit()" href=""><li><?=$month_lists?></li></a><?
-}
-            }?>
         </div>
     </div>
 </header>

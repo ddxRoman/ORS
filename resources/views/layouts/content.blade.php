@@ -1,4 +1,3 @@
-
 @vite(['resources/js/app.js','resources/css/main.css','resources/css/taskmanager.css'])
 @vite(['resources/css/button.css'])
 <div class="body">
@@ -26,7 +25,9 @@
             </div>
             <div class="col-4">
                 <div class="rmenu">
-@include('layouts.Taskmeneger\taskmanagerAccordion')
+                    <iframe src="" frameborder="0">
+                        @include('layouts.Taskmeneger\taskmanagerAccordion')
+                    </iframe>
             </div>
         </div>
     </div> <!-- Начало Тела сайта -->

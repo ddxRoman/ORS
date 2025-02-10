@@ -1,3 +1,6 @@
+
+@vite(['resources/js/app.js','resources/css/main.css','resources/css/taskmanager.css'])
+@vite(['resources/css/button.css'])
 <body class="taskmanager_body">
 
   <button class="btn_add_task" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Добавить новую задачу</button>
@@ -10,7 +13,9 @@
       <body class="iframe-body">
         <h4>Надо делать, пилить, шоп нормально было</h4>
         <div class="taskadd">
+          @csrf
           <form action="" method="POST">
+            @csrf
             <input required type="text" name="name" placeholder="Введите название">
             <select name="prioritet">
               <option value="0">Backlog </option>
@@ -25,18 +30,19 @@
         </div>
     </div>
   </div>
+  @foreach($taskView as $taskViews)
 
-  <? for ($i = 0; $i < 50; $i++) { ?>
     <div class="accordion" id="accordionExample">
       <div class="accordion-item">
-        <h5 class="accordion-header" id="heading<?= $i ?>">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $i ?>" aria-expanded="false" aria-controls="collapse<?= $i ?>">
-            Accordion Item <?= $i ?>
+        <h5 class="accordion-header" id="heading{{$taskViews->id}}">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{$taskViews->id}}" aria-expanded="false" aria-controls="collapse{{$taskViews->id}}">
+          №{{$taskViews->id." ".$taskViews->name }} 
           </button>
         </h5>
-        <div id="collapse<?= $i ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $i ?>" data-bs-parent="#accordionExample">
+        <div id="collapse{{$taskViews->id}}" class="accordion-collapse collapse" aria-labelledby="heading{{$taskViews->id}}" data-bs-parent="#accordionExample">
           <div class="accordion-body">
             <form action="" method="post" name="form"> <!-- форма с селектами-->
+              @csrf
               <select name="currency" onchange="this.form.submit()">
                 <? //if ($product[3] == 0) { 
                 ?> <!-- Проверяем если статус задачи 1 то выводим Селект где первая запись Активный  -->
@@ -53,12 +59,13 @@
                 <option value="2">Нет знаний</option>
               </select>
               <form action="" method="post" name="real_delete">
+                @csrf
                 <a href=""><img src="/file/icons/delete.png" width="16px" height="16px"></a>
               </form>
             </form>
             <div class="accordion__content">
               <pre>
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until lorem55 the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              {{$taskViews->content}}
         </pre>
 
               <a href="" target="_blank"><img class="pictures-in-tasks" src=""></a>
@@ -84,8 +91,7 @@
           </div>
         </div>
       </div>
-    <? } ?>
-
+    @endforeach
     </div>
 </body>
 
