@@ -25,8 +25,7 @@
             </div>
             <div class="col-4">
                 <div class="rmenu">
-                    <iframe src="" frameborder="0">
-                        @include('layouts.Taskmeneger\taskmanagerAccordion')
+                    <iframe src="{{route('tasks')}}" frameborder="0">
                     </iframe>
             </div>
         </div>
